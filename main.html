@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de Página Web - GymConnect</title>
+    <link rel="stylesheet" href="colooo.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="control-panel">
+            <h2>🏋️ Personalizar Gimnasio</h2>
+            
+            <div class="control-group">
+                <h3>📝 Información General</h3>
+                <div class="form-group">
+                    <label>Nombre del Gimnasio:</label>
+                    <input type="text" id="gymName" placeholder="Nombre del gimnasio">
+                </div>
+                <div class="form-group">
+                    <label>Eslogan:</label>
+                    <input type="text" id="gymSlogan" placeholder="Eslogan del gimnasio">
+                </div>
+                <div class="form-group">
+                    <label>Descripción:</label>
+                    <textarea id="gymDescription" rows="4" placeholder="Descripción del gimnasio"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>🌐 Redes Sociales</h3>
+                <div class="form-group">
+                    <label>URL de Instagram:</label>
+                    <input type="url" id="instagramUrl" placeholder="https://instagram.com/tu_gimnasio">    
+                </div>
+                <div class="form-group">
+                    <label>URL de Facebook:</label>
+                    <input type="url" id="facebookUrl" placeholder="https://facebook.com/tu_gimnasio">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>🎨 Colores</h3>
+                <div class="color-group">
+                    <div class="form-group">
+                        <label>Color Principal:</label>
+                        <input type="color" id="primaryColor" value="#ff6b35">
+                    </div>
+                    <div class="form-group">
+                        <label>Color Secundario:</label>
+                        <input type="color" id="secondaryColor" value="#333333">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Color de Fondo:</label>
+                    <input type="color" id="backgroundColor" value="#f8f9fa">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>📝 Tipografía</h3>
+                <div class="form-group">
+                    <label>Fuente Principal:</label>
+                    <select id="fontFamily">
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="'Helvetica', sans-serif">Helvetica</option>
+                        <option value="'Georgia', serif">Georgia</option>
+                        <option value="'Times New Roman', serif">Times New Roman</option>
+                        <option value="'Courier New', monospace">Courier New</option>
+                        <option value="'Impact', sans-serif">Impact</option>
+                        <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+                        <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                        <option value="'Verdana', sans-serif">Verdana</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>📷 Imágenes</h3>
+                <div class="form-group">
+                    <label>Logo del Gimnasio en imagen sin fondo:</label>
+                    <input type="file" id="logoUpload" accept="image/*">
+                    <div id="logoPreview" class="image-preview">Sin logo seleccionado</div>
+                </div>
+                <div class="form-group">
+                    <label>Imagen de Fondo del Header:</label>
+                    <input type="file" id="headerImageUpload" accept="image/*">
+                    <div id="headerImagePreview" class="image-preview">Sin imagen seleccionada</div>
+                </div>
+                <div class="form-group">
+                    <label>Instalaciones del Gimnasio:</label>
+                    <input type="file" id="galleryUpload" accept="image/*" multiple>
+                    <div id="galleryPreview" class="image-preview gallery-preview">Sin imágenes seleccionadas</div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>💾 Exportar</h3>
+                <div class="form-group">
+                    <button id="downloadBtn" class="download-btn">
+                        📥 Descargar HTML Completo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="website-preview" id="websitePreview">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-logo" id="navLogo">GymConnect</div>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link social-link" id="instagramNav" target="_blank" style="display: none;">📷 Instagram</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link social-link" id="facebookNav" target="_blank" style="display: none;">📘 Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Página de Inicio -->
+            <div class="page active" id="home">
+                <div class="preview-header" id="previewHeader">
+                    <img id="headerBackgroundImg" class="header-background" style="display: none;">
+                    <img id="gymLogoImg" class="gym-logo" style="display: none;">
+                    <h1 class="gym-name" id="previewGymName">GymConnect</h1>
+                    <p class="gym-slogan" id="previewGymSlogan">Transforma tu cuerpo, transforma tu vida</p>
+                    <p class="gym-description" id="previewGymDescription">
+                        Nuestro gimnasio está equipado con la tecnología más avanzada y los mejores entrenadores para ayudarte a alcanzar tus objetivos fitness. Ofrecemos un ambiente motivador y profesional donde podrás superarte cada día.
+                    </p>
+                </div>
+
+                <div class="preview-content">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">💪</div>
+                            <h3 class="service-title">Entrenamiento Personal</h3>
+                            <p class="service-description">
+                                Sesiones uno a uno con entrenadores certificados para maximizar tus resultados.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🏃‍♂️</div>
+                            <h3 class="service-title">Cardio Avanzado</h3>
+                            <p class="service-description">
+                                Equipos de última generación para mejorar tu resistencia cardiovascular.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🧘‍♀️</div>
+                            <h3 class="service-title">Clases Grupales</h3>
+                            <p class="service-description">
+                                Yoga, Pilates, Zumba y más clases para mantenerte motivado.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🥗</div>
+                            <h3 class="service-title">Nutrición</h3>
+                            <p class="service-description">
+                                Planes alimenticios personalizados para complementar tu entrenamiento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-section" id="gallerySection" style="display: none;">
+                        <h2 class="gallery-title">Nuestras Instalaciones</h2>
+                        <div class="gallery-grid" id="galleryGrid"></div>
+                    </div>
+
+                    <!-- SECCIÓN DE REDES SOCIALES -->
+                    <section class="social-section" id="redes" style="display: none;">
+                        <h2>¡Síguenos en Redes Sociales!</h2>
+                        <p>Mantente actualizado con nuestras clases, tips de entrenamiento y promociones especiales</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-link instagram" id="instagramLink">
+                                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                Instagram
+                            </a>
+
+                            <a href="#" target="_blank" class="social-link facebook" id="facebookLink">
+                                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Facebook
+                            </a>
+                        </div>
+                    </section>
+
+                    <div class="cta-section" id="ctaSection">
+                        <h2 class="cta-title">¿Listo para Empezar?</h2>
+                        <p>Únete a nuestra comunidad fitness y alcanza tus objetivos.</p>
+                        <button class="cta-button">¡Inscríbete Ahora!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 <span id="footerGymName">GymConnec </span> - Todos los derechos reservados</p>
+                    <div class="footer-social">
+                        <a href="#" id="footerInstagram" class="social-footer-link" target="_blank" style="display: none;">📷 Instagram</a>
+                        <a href="#" id="footerFacebook" class="social-footer-link" target="_blank" style="display: none;">📘 Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="JAVAS.js"></script>
+</body>
+</html>
