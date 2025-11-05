@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymConeet</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="avances.css">
+</head>
+<body>
+    <header>
+        <h1>GymConeet 💪</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#calculadora-imc">Calcular IMC</a></li>
+                <li><a href="pgi2.html">Ropa</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a GymConeet</h2>
+            <p>Conecta cuerpo y mente. Somos tu aliado para lograr tus metas fitness.</p>
+            <img src="gym1.jpg" alt="Zona de entrenamiento general del gimnasio">
+            <img src="gym2.jpg" alt="Área de pesas libres y máquinas">
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <article>
+                <h3>Entrenamiento Personalizado</h3>
+                <p>Plan adaptado a tu nivel físico y objetivos personales.</p>
+            </article>
+            <article>
+                <h3>Asesoría Nutricional</h3>
+                <p>Guiamos tu alimentación para mejorar tus resultados.</p>
+            </article>
+        </section>
+
+        <section id="ubicacion">
+            <h2>📍 Encuéntranos</h2>
+            <p>Estamos ubicados cerca de **Plaza de las Américas**, en la localidad de Kennedy, Bogotá.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8197022097784!2d-74.12053968461705!3d4.62340579661448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9907c1664d55%3A0x7d27e704602f23b2!2sCentro%20Comercial%20Plaza%20de%20las%20Am%C3%A9ricas!5e0!3m2!1ses!2sco!4v1680549420000!5m2!1ses!2sco" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                    title="Ubicación de GymConeet cerca de Plaza de las Américas, Bogotá">
+                </iframe>
+            </div>
+        </section>
+        <section id="calculadora-imc">
+            <h2>💪 Calcula tu IMC</h2>
+            <p>Usa nuestra herramienta para conocer tu Índice de Masa Corporal.</p>
+            <div class="imc-form">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" placeholder="Ej: 75" min="1" step="0.1">
+                
+                <label for="altura">Altura (metros):</label>
+                <input type="number" id="altura" placeholder="Ej: 1.75" min="0.1" step="0.01">
+                
+                <button onclick="calcularIMC()">Calcular IMC</button>
+                
+                <div class="resultado-imc">
+                    <h3>Tu IMC: <span id="resultado">0.0</span></h3>
+                    <p id="clasificacion">Ingresa tus datos para ver tu clasificación.</p>
+                </div>
+            </div>
+        </section>
+        <aside>
+            💥 Promoción: Regístrate este mes y recibe un plan de entrenamiento gratis.
+        </aside>
+    </main>
+
+    <footer id="contacto">
+        <p>📍 plaza de las americas - Bogotá, Colombia</p>
+        <p>📧 gymconeet@gmail.com | 📞 321 555 9988</p>
+        <p>&copy; 2025 GymConeet</p>
+    </footer>
+
+    <script src="FINALJS.js"></script> 
+</body>
+</html>
